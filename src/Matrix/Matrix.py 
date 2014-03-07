@@ -1,0 +1,89 @@
+
+import operator
+class Matrix(object):
+    """ A m x n mtx of real numbers"""
+    # This will be the mtx holding the data
+    
+    def __init__(self, m , n ):
+        # rows 
+        self.m = m;
+        self.n = n;
+        
+    
+        # Initialize the mtx
+        mtx = [[0] * n for x in range (m)];
+        self.mtx = mtx;  
+        
+        
+    def __eq__ (self, x):
+        """Check to see if two matrices are equal"""
+        mtx = self.mtx
+        m = self.m
+        n = self.n 
+        
+        m1 = x.m
+        n1 = x.n
+        
+        if m1 != m or n != n1:
+            return False
+        
+        for i in range(m):
+            for j in range(n):
+                # Compare each item to see if anything is different
+                if x[i][j] != mtx[i][j]:
+                    return False;
+                    
+        return True
+                
+    def __getitem__(self, idx):
+        """ Returns an item at mtx[][]"""
+        # return the M[][] at the requested index
+        return self.mtx[idx]
+        
+    def resize(self, rows, cols):
+        """ Resize the mtx"""
+        # Erase the mtx and resize it 
+        self.m = rows; 
+        self.n = cols;
+        M = [[0] * cols for x in rows]
+        self.mtx = M
+        return True
+    
+    
+   
+    def __setitem__(self,idx,item):
+        if len(self.mtx[idx]) == len(item):
+            self.mtx[idx] = item;
+        else: 
+            raise "Incorrect Dimension"
+            
+        
+        
+        
+    def __str__(self):
+        """ Return the mtx"""
+        mtxPrint = ""
+        m = self.m 
+        n = self.n 
+        M = self.mtx
+        
+        for i in range(m):
+            mtxPrint += "\n"
+            for j in range(n):
+                mtxPrint += " " + str(M[i][j]) + " ";
+               
+        return mtxPrint
+               
+
+                      
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
