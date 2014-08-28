@@ -1,0 +1,102 @@
+.TopBar {
+	background: #5C85FF;
+	font-size: 2em;
+	text-align: center;
+	height: 40px;
+	width: 98vw;
+}
+table#matrixchoice.matrix{
+	margin-top:30px;
+}
+table.matrix{
+	margin-top:30px;
+}
+
+.Matrix {
+	background: #E3E3E3;
+	width: 240px;
+	margin-top: 20px;
+	height: 150px;
+	text-align: center;
+	overflow: auto;
+}
+
+.matrix {
+	position: relative;
+	
+}
+.matrix:before {
+	content: "";
+	position: absolute;
+	left: -6px;
+	top: 0;
+	border: 1px solid #000;
+	border-right: 0px;
+	width: 6px;
+	height: 100%;
+}
+.matrix:after {
+	content: "";
+	position: absolute;
+	right: -6px;
+	top: 0;
+	border: 1px solid #000;
+	border-left: 0px;
+	width: 6px;
+	height: 100%;
+}
+.matrix td {
+	padding:10px;
+}
+
+#main {
+	width: 1000px;
+	height: 800px;
+}
+#MatrixViewer {
+	background: #E3E3E3;
+	height: 700px;
+	width: 260px;
+	overflow: auto;
+	float: left;
+	display: inline-block;
+}
+
+#MatrixOps {
+	display: inline-block;
+	width: 740px;
+	height: 700px;
+}
+.OpsDiv {
+
+	display: inline-block;
+	width: 200px;
+	height: 700px;
+	vertical-align: top;
+}
+#matrix_selection {
+	width: 240px;
+	height: 200px;
+	overflow: auto;
+	background: white;
+	margin-top: 200px;
+	border-style: solid;
+	border-color: black;
+	text-align:center;
+}
+
+.operation_button {
+	font-size: 1.5em;
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 50px;
+}
+#matrix_answer {
+	width: 240px;
+	border-style: solid;
+	border-color: black;
+	height: 200px;
+	margin-top: 200px;
+	overflow: auto;
+}

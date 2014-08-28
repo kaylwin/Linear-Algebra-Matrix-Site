@@ -1,0 +1,78 @@
+
+{%load staticfiles%}
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+
+        <style>
+			td {
+				padding: 2px
+			}
+			tr {
+				padding: 2px
+			}
+
+			.matrixEntryBox {
+				height: 60px;
+				width: 90px;
+				background: #C0C0C0;
+				vertical-align: top;
+				margin: 4px;
+				font-size: 2em;
+				text-align: center
+			}
+
+			#CreateMatrix {
+			    background: #ffffff;
+				font-size: 2em;
+				text-align: center;
+			}
+
+			form {
+
+				text-align: center;
+			}
+			p {
+				text-align: center;
+				font-size: 1.5em;
+				height: 20px;
+			}
+			input{
+			    font-size: 1em;
+			}
+			
+			
+        </style>
+    </head>
+    <title> Matrix Calculator </title>
+    <h1 style = "background: #5C85FF; text-align:center;"> Matrix Operations!!! </h1>
+
+    <body>
+
+        <form action = "drawMatrix.js" id = "matrix_dimension_entry">
+            <p>
+                Rows:
+                <input type="text" name="Rows" id = "row_input"/>
+            </p>
+            <p>
+                Columns:
+                <input type="text" name="Columns" id = "col_input"/>
+            </p>
+            <input id="CreateMatrix" type="button" value="Create matrix" onclick="drawMatrix();" />
+        </form>
+
+    </body>
+    
+    
+    <script src = "{%static 'Matrix/js/jQueryCompressed.js' %}"></script>
+    <script src = "{%static 'Matrix/js/jquery.cookie.js'%}"></script>
+    <script src = "{%static 'Matrix/js/main.js'%}"></script>
+    
+    <!--
+    <script src = "JQuery/jQueryCompressed.js"></script>
+    <script src = "JQuery/jquery.cookie.js"></script>
+    <script src="Main_Page/main.js"></script>
+    -->
+    
+</HTML>
+

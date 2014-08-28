@@ -1,0 +1,61 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+    <title> Matrix Operations </title>
+    <link rel="stylesheet" href="{% static 'Matrix/css/matrix_operations.css' %}">
+    <h1 class = "TopBar"> Matrix Operations!</h1>
+    <body>
+        <button onCLick = addMatrix() style = "width: 235px; font-size: 2.5em; margin-bottom:20px">
+            Add Matrix
+        </button>
+        <div id = main>
+            <div id = "MatrixViewer">
+                <b style = "font-size:2.5em;"> My Matricies </b>
+            </div>
+
+            <div id = "MatrixOps">
+                <div class = "OpsDiv" style= "width:240px">
+                    <div id ="matrix_selection">
+
+                    </div>
+                </div>
+
+                <div class = "OpsDiv">
+                    <button class = "operation_button" onClick = "Orthagonalize()">
+                        Orthagonalize
+                    </button>
+                    <button class = "operation_button" onClick = "RREF()" >
+                        RREF
+                    </button>
+                    <button class = "operation_button" onCLick = "getEigens()">
+                        EigenValues
+                    </button>
+                    <button class = "operation_button" onClick = "Invert()">
+                        Invert
+                    </button>
+                </div>
+
+                <div class = "OpsDiv">
+                    <div id = "matrix_answer">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+    <script src ="{%static 'Matrix/js/jQueryCompressed.js'%}"></script>
+    <script src ="{%static 'Matrix/js/jquery.cookie.js'%}"></script>
+    <script src = "{%static 'Matrix/js/matrix_operations.js'%}"></script>
+    <script src = "{%static 'Matrix/js/matrix_operations_page.js'%}"></script>
+
+    <!-- Before the import into Django
+    <script src = "../JQuery/jQueryCompressed.js"></script>
+    <script src = "../JQuery/jquery.cookie.js"></script>
+    <script src = "matrix_operations.js"></script>
+    <script src = "matrix_operations_page.js"></script>
+    -->
+
+</html>
